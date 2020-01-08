@@ -1,0 +1,1 @@
+alias carthage='mint run carthage carthage'

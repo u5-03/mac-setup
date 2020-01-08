@@ -5,6 +5,7 @@ alias gap='git add -p'
 alias gaproj='git aproj'
 alias gb='git branch'
 alias gc='git commit'
+alias gcl='git clone'
 alias gca='git commit --amend'
 alias gco='git checkout'
 alias gcp='git cherry-pick'
@@ -31,6 +32,9 @@ alias gstl='git stash list'
 alias grbdev='git rebase origin/develop'
 alias grbidev='git rebase -i origin/develop'
 alias gcd='git reset HEAD .; git checkout .; git clean -df .'
+alias gra='git remote add origin'
+alias gpf='git push -f origin'
+alias gs='git status'
 
 function grb() {
   git rebase origin/$1

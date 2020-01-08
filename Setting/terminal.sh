@@ -1,14 +1,3 @@
-# 分割している設定ファイルの読み込み
-DIRECTORY=`dirname $0`
-## Pathを通す
-source $DIRECTORY/pathSettings.sh
-## Aliasの設定
-source $DIRECTORY/Alias/index.sh
-## 設定ファイル系の設定
-source $DIRECTORY/Setting/index.sh
-## historyの設定
-source $DIRECTORY/history.sh
-
 # 環境変数export LANG=ja_JP.UTF-8
 export KCODE=u           # KCODEにUTF-8を設定
 
@@ -62,6 +51,3 @@ precmd () {
     LANG=en_US.UTF-8 vcs_info
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
-#add-zsh-hook precmd _update_vcs_info_msg
-# PROMPT="%{${fg[green]}%}%n%{${reset_color}%}@%F{blue}localhost%f:%1(v|%F{red}%1v%f|) $ "
-# RPROMPT='[%F{green}%d%f]'
