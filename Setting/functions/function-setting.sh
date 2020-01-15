@@ -5,4 +5,4 @@ if [ ! -e $HOME/mac-setup/Setting/functions/git-escape-magic ]; then
 fi
 
 autoload -Uz git-escape-magic
-git-escape-magic
+# git-escape-magic
