@@ -1,0 +1,1 @@
+source $DIRECTORY/Setting/functions/function-setting.sh

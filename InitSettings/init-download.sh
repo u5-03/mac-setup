@@ -30,4 +30,3 @@ fi
 echo " ---- mac-setup.git -----"
 git clone https://github.com/u5-03/mac-setup.git
 echo " ------------ END ------------"
-
