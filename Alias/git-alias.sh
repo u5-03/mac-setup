@@ -34,8 +34,8 @@ alias grbidev='git rebase -i origin/develop'
 alias gcd='git reset HEAD .; git checkout .; git clean -df .'
 alias gra='git remote add origin'
 alias gpl='git pull origin'
-alias gph='git push origin'
-alias gphf='git push -f origin'
+alias gps='git push origin'
+alias gpsf='git push -f origin'
 alias gs='git status'
 
 function grh() {
