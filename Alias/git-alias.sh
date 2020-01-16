@@ -1,6 +1,6 @@
 # git Aliases
 alias ga='git add'
-alias gaA='git add -A'
+alias gaa='git add -A'
 alias gap='git add -p'
 alias gaproj='git aproj'
 alias gb='git branch'
@@ -33,9 +33,18 @@ alias grbdev='git rebase origin/develop'
 alias grbidev='git rebase -i origin/develop'
 alias gcd='git reset HEAD .; git checkout .; git clean -df .'
 alias gra='git remote add origin'
-alias gp='git push origin'
-alias gpf='git push -f origin'
+alias gpl='git pull origin'
+alias gph='git push origin'
+alias gphf='git push -f origin'
 alias gs='git status'
+
+function grh() {
+  if [ ! -n "$1" ] && [ -e $1 ]; then
+    echo "arg1: branch name is required!"; return
+  else
+    git reset --hard origin/$1
+  fi
+}
 
 function grb() {
   git rebase origin/$1
