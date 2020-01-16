@@ -24,6 +24,8 @@ setopt print_eight_bit
 setopt interactive_comments
 # beep を無効にする
 setopt no_beep
+# rm *で確認を求める機能を無効化する
+setopt RM_STAR_SILENT
 
 # Terminalのユーザー名を非表示にする
 PROMPT=$'%n [%*] -> %% '
