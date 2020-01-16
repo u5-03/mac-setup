@@ -1,6 +1,6 @@
 if ! which xcversion >/dev/null; then
   echo xcode-install will be installed!
-  gem install xcode-install
+  sudo gem install xcode-install
 else
   echo xcode-install is already installed!
 fi
