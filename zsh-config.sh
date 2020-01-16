@@ -10,8 +10,3 @@ DIRECTORY=$HOME/mac-setup
 source $DIRECTORY/Alias/index.sh
 ## 設定ファイル系の設定
 source $DIRECTORY/Setting/index.sh
-
-
-#add-zsh-hook precmd _update_vcs_info_msg
-# PROMPT="%{${fg[green]}%}%n%{${reset_color}%}@%F{blue}localhost%f:%1(v|%F{red}%1v%f|) $ "
-# RPROMPT='[%F{green}%d%f]'

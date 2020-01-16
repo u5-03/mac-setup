@@ -26,11 +26,9 @@ setopt interactive_comments
 setopt no_beep
 
 # Terminalのユーザー名を非表示にする
-# PS1=$USER" "`$date`  
 PROMPT=$'%n [%*] -> %% '
-## PROMPT
-# 現在のパスを表示(背景色を青色に設定)
-RPROMPT="%{${bg[blue]}%}[%~]%{${reset_color}%}"
+# 現在のパスを表示(文字を青色に設定)
+RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
 
 # PROMPT変数内で変数参照する
 setopt prompt_subst
