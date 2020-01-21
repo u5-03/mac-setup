@@ -1,6 +1,15 @@
 # custom-alias
 alias sz='source ~/.zshrc'
+alias opcd='open `pwd`'
 alias nb='nodebrew'
+
+# Wifi設定alias
+alias wfe='sudo networksetup -setairportpower en0 on'
+alias wfd='sudo networksetup -setairportpower en0 off'
+alias cwf='connectWifi'
+function connectWifi() {
+  sudo networksetup -setairportnetwork en0 $1 $2
+}
 
 ##「悪質なソフトウェアかどうかをAppleで確認できないため、このソフトウェアを開けません。」のエラー時に、全てのアプリケーション実行を許可する(application-force-install)
 alias afi='sudo spctl --master-disable'
