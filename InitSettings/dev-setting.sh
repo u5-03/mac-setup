@@ -1,3 +1,4 @@
+# Node
 brew install nodebrew
 brew update nodebrew
 nodebrew setup
@@ -7,3 +8,8 @@ nodebrew use stable
 
 npm install ionic -g
 npm install cordova -g
+
+# Python
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

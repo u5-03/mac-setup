@@ -1,1 +1,8 @@
 alias carthage='mint run carthage carthage'
+alias cu='carthage update --platform iOS --cache-builds'
+alias cb='carthage bootstrap --platform iOS --cache-builds'
+alias xcodegen='mint run xcodegen xcodegen'
+alias xg='xcodegen'
+alias xcconfig-extractor='mint run xcconfig-extractor xcconfig-extractor'
+alias xe='xcconfig-extractor'
+alias mb='mint bootstrap'
