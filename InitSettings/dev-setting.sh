@@ -9,7 +9,12 @@ nodebrew use stable
 npm install ionic -g
 npm install cordova -g
 
-# Python
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# Flutter
+mkdir $HOME/dev-tool
+git clone https://github.com/flutter/flutter.git -b stable $HOME/dev-tool/flutter
+export PATH="$PATH:$HOME/dev-tool/flutter/bin"
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+flutter doctor
+
+# Pods
+sudo gem install cocoapods

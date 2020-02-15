@@ -26,6 +26,7 @@ brew "zsh-syntax-highlighting"
 
 cask "alfred"
 cask "app-cleaner"
+cask "android-studio"
 cask "bettertouchtool"
 cask "cheatsheet"
 cask "clipy"
