@@ -18,6 +18,4 @@ chsh -s /usr/local/bin/zsh
 # Screen captureの保存先を変更
 ccd
 
-#Pathを通す
-export PATH="/usr/local/bin:$PATH"
-export PATH=$PATH:$HOME/.nodebrew/current/bin
+sh $DIRECTORY/InitSettings/Dev/index.sh
