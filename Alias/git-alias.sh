@@ -37,6 +37,7 @@ alias gpl='git pull origin'
 alias gps='git push origin'
 alias gpsf='git push -f origin'
 alias gs='git status'
+alias gsu='git submodule update -i'
 
 function grh() {
   if [ ! -n "$1" ] && [ -e $1 ]; then

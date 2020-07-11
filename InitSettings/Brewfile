@@ -11,6 +11,7 @@ brew "mysql-client"
 brew "mint"
 brew "pyenv"
 brew "rbenv"
+brew "rbenv-communal-gems"
 brew "svn"
 brew "terminal-notifier"
 brew "tfenv"
@@ -53,6 +54,7 @@ cask "the-unarchiver"
 cask "visual-studio-code"
 cask "vlc"
 cask "zeplin"
+cask "wkhtmltopdf"
 
 mas "Keynote", id: 409183694
 mas "Slack", id: 803453959

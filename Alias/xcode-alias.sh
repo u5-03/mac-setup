@@ -58,7 +58,7 @@ function replaceKeybindingFile() {
     KeyBindingFilePath=$PrivateKeyBindingFilePath
     echo Default file: $HOME/SettingFiles/Xcode/XcodekeyBinding/IDETextKeyBindingSet.plist will be used!
   else
-    echo arg2(KeyBindingFilePath) is invalid!; return
+    echo "arg2(`$KeyBindingFilePath`) is invalid!"; return
   fi
   XcodeKeyBindingFilePath="/Applications/Xcode$1.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist"
   cp -f $KeyBindingFilePath $XcodeKeyBindingFilePath

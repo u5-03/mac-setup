@@ -19,3 +19,7 @@ androidSDKPAth="$HOME/Library/Android/sdk/platform-tools"
 if [[ ! $PATH =~ $androidSDKPAth ]]; then
   export PATH="$androidSDKPAth:$PATH"
 fi
+rbenv="$HOME/.rvenv/bin"
+if [[ ! $PATH =~ $rbenv ]]; then
+  export PATH="$PATH:$rbenv"
+fi
