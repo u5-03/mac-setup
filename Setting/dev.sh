@@ -23,3 +23,8 @@ rbenv="$HOME/.rvenv/bin"
 if [[ ! $PATH =~ $rbenv ]]; then
   export PATH="$PATH:$rbenv"
 fi
+rbenvShims="$HOME/.rvenv/shims"
+if [[ ! $PATH =~ $rbenvShims ]]; then
+  export PATH="$PATH:$rbenvShims"
+fi
+eval "$(rbenv init -)"

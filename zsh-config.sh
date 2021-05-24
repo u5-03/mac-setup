@@ -10,3 +10,6 @@ DIRECTORY=$HOME/mac-setup
 source $DIRECTORY/Alias/index.sh
 ## 設定ファイル系の設定
 source $DIRECTORY/Setting/index.sh
+
+## 重複したPATHを削除
+typeset -U PATH

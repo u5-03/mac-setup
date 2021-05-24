@@ -37,11 +37,14 @@ alias gpl='git pull origin'
 alias gps='git push origin'
 alias gpsf='git push -f origin'
 alias gs='git status'
-alias gsu='git submodule update -i'
+alias gsu='git submodule update --init --recursive'
+alias gsuf='git submodule update --init --force --remote'
+alias grc='git rm --cached'
 
 function grh() {
   if [ ! -n "$1" ] && [ -e $1 ]; then
-    echo "arg1: branch name is required!"; return
+    echo "arg1: branch name is required!"
+    return
   else
     git reset --hard origin/$1
   fi

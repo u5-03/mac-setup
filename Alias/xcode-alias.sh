@@ -4,6 +4,8 @@ alias ddd='deletederiveddata'
 alias xcv='xcversion'
 alias xo='xcodeOpen'
 alias rkb='replaceKeybindingFile'
+alias xsl='xcrun simctl list'
+alias spg='swift package generate-xcodeproj'
 
 ## xcodeのバージョンを指定して、プロジェクトを開く($1: Xcodeのバージョン, $2: .xcodeproj/xcworkspace のパス)
 function xcodeOpen() {
