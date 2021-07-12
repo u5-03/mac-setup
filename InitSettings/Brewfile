@@ -1,31 +1,22 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-brew "openssl@1.1"
 brew "arp-scan"
-brew "bitrise"
 brew "cloc"
 brew "cmake"
 brew "colordiff"
 brew "curl"
 brew "lame"
-brew "ffmpeg"
-brew "gcc"
 brew "goenv"
-brew "gtk+3"
-brew "imagemagick"
+brew "gnu-sed"
 brew "jq"
 brew "mas"
 brew "mint"
-brew "mysql-client"
 brew "nodebrew"
 brew "pyenv"
 brew "rbenv"
 brew "rbenv-communal-gems"
-brew "sox"
-brew "subversion"
 brew "tcptraceroute"
-brew "terminal-notifier"
 brew "tfenv"
 brew "tmux"
 brew "translate-shell"
@@ -45,14 +36,13 @@ cask "dash", args: { appdir: "/Applications" }
 cask "docker", args: { appdir: "/Applications" }
 cask "finicky"
 cask "firefox", args: { appdir: "/Applications" }
-cask "google-backup-and-sync", args: { appdir: "/Applications" }
 cask "google-japanese-ime", args: { appdir: "/Applications" }
 cask "handbrake", args: { appdir: "/Applications" }
 cask "imageoptim", args: { appdir: "/Applications" }
 cask "iterm2", args: { appdir: "/Applications" }
 cask "keyboardcleantool", args: { appdir: "/Applications" }
 cask "menumeters", args: { appdir: "/Applications" }
-cask "onedrive", args: { appdir: "/Applications" }
+cask "notion", args: { appdir: "/Applications" }
 cask "postman", args: { appdir: "/Applications" }
 cask "provisionql", args: { appdir: "/Applications" }
 cask "sdformatter"
@@ -67,7 +57,6 @@ cask "vivaldi"
 cask "vlc", args: { appdir: "/Applications" }
 cask "wkhtmltopdf"
 cask "zeplin", args: { appdir: "/Applications" }
-mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
