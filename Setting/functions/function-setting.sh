@@ -6,3 +6,12 @@ fi
 
 autoload -Uz git-escape-magic
 # git-escape-magic
+
+# Settings to use biometrics when running `sudo` in Terminal
+function setBiometricsAuthAsTouchID() {
+  echo "--Biometrics setting of terminal when use 'sudo'----------------------------"
+  # Enable user write permission 
+  sudo chmod u+w /etc/pam.d/
+  # Add `auth       sufficient     pam_tid.so` to 2nd line of `/etc/pam.d/sudo`
+  sed -i '2s/^/auth       sufficient     pam_tid.so\n/' /etc/pam.d/sudo
+}
