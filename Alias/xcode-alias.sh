@@ -4,6 +4,7 @@ alias ddd='deletederiveddata'
 alias xcv='xcversion'
 alias xo='xcodeOpen'
 alias rkb='replaceKeybindingFile'
+alias sds='setDeviceSupport'
 alias xsl='xcrun simctl list'
 alias spg='swift package generate-xcodeproj'
 
@@ -65,4 +66,24 @@ function replaceKeybindingFile() {
   XcodeKeyBindingFilePath="/Applications/Xcode$1.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist"
   cp -f $KeyBindingFilePath $XcodeKeyBindingFilePath
   echo "keybinding file of Xcode$1.app was replaced!"
+}
+
+## Specify the iOS and Xcode version, download the DeviceSupport file and set it in the corresponding version Xcode ($1: iOS version, $2: Xcode version path)
+function setDeviceSupport() {
+  # null check of arg1
+  if [ -z "$1" ]; then
+    echo "arg1(iOS version number) is required! e.g. 14.6"; return
+  fi
+  # null check of arg2
+  if [ -z "$2" ]; then
+    echo "arg2(xcode version number) is required! e.g. 12.5"; return
+  fi
+  which svn
+  echo "Clone $1 DeviceSupport zip from https://github.com/filsv/iPhoneOSDeviceSupport"
+  svn export https://github.com/filsv/iPhoneOSDeviceSupport/trunk/$1.zip
+  unzip $1.zip
+  mv -f ./$1 /Applications/Xcode$2.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/
+  rm -f $1.zip
+  rm -f -r __MACOSX
+  echo "Set $1 Device Support file to Xcode$2!"
 }
