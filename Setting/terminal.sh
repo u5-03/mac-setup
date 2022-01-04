@@ -72,3 +72,5 @@ autoload -Uz vcs_info
 #     LANG=en_US.UTF-8 vcs_info
 #     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 # }
+
+ export SHELL="/usr/local/bin/zsh"
