@@ -3,6 +3,7 @@ alias sz='source ~/.zshrc'
 alias opcd='open `pwd`'
 alias nb='nodebrew'
 alias sed='gsed'
+alias paths="echo $PATH | tr ':' '\n'"
 
 # Wifi設定alias
 alias wfe='sudo networksetup -setairportpower en0 on'

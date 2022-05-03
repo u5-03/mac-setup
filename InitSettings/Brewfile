@@ -29,7 +29,7 @@ brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 cask "alfred", args: { appdir: "/Applications" }
 cask "android-studio", args: { appdir: "/Applications" }
-cask "app-cleaner", args: { appdir: "/Applications" }
+cask "appcleaner", args: { appdir: "/Applications" }
 cask "balenaetcher"
 cask "bettertouchtool"
 cask "cheatsheet", args: { appdir: "/Applications" }

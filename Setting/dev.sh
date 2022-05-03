@@ -5,11 +5,9 @@ if [[ ! $PATH =~ $nodebrewPath ]]; then
 fi
 # Python
 pythonPath=".pyenv"
-if [[ ! $PATH =~ $pythonPath ]]; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-fi
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/shims:$PATH"
+eval "$(pyenv init -)"
 # Flutter
 flutterPath="$HOME/dev-tool/flutter/bin"
 if [[ ! $PATH =~ $flutterPath ]]; then
@@ -28,3 +26,7 @@ if [[ ! $PATH =~ $rbenvShims ]]; then
   export PATH="$PATH:$rbenvShims"
 fi
 eval "$(rbenv init -)"
+# Android
+ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/emulator:$ANDROID_HOME/tools/:$ANDROID_HOME/platform-tools
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/Contents/Home"
