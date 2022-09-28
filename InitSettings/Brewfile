@@ -4,6 +4,7 @@ tap "homebrew/core"
 brew "arp-scan"
 brew "cloc"
 brew "cmake"
+brew "cmd-eikana"
 brew "colordiff"
 brew "curl"
 brew "lame"
@@ -16,7 +17,6 @@ brew "mint"
 brew "nodebrew"
 brew "pyenv"
 brew "rbenv"
-brew "rbenv-communal-gems"
 brew "tcptraceroute"
 brew "tfenv"
 brew "tmux"
@@ -57,6 +57,7 @@ cask "visual-studio-code", args: { appdir: "/Applications" }
 cask "vivaldi"
 cask "vlc", args: { appdir: "/Applications" }
 cask "wkhtmltopdf"
+cask "xcodes", args: { appdir: "/Applications" }
 cask "zeplin", args: { appdir: "/Applications" }
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694

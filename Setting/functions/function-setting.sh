@@ -12,6 +12,6 @@ function setBiometricsAuthAsTouchID() {
   echo "--Biometrics setting of terminal when use 'sudo'----------------------------"
   # Enable user write permission 
   sudo chmod u+w /etc/pam.d/
-  # Add `auth       sufficient     pam_tid.so` to 2nd line of `/etc/pam.d/sudo`
-  sed -i '2s/^/auth       sufficient     pam_tid.so\n/' /etc/pam.d/sudo
+  echo "Add `auth       sufficient     pam_tid.so` to 2nd line of `/etc/pam.d/sudo`"
+  sudo vi /etc/pam.d/sudo
 }

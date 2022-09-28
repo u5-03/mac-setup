@@ -10,9 +10,9 @@ if ! command_exists brew ; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   brew doctor
   brew -v
-  # M1 Macは以下を実行
-  # echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/r/.zprofile
-  # eval "$(/opt/homebrew/bin/brew shellenv)"
+
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/r/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
   echo " ------------ Homebrew END ------------"
 fi
 
