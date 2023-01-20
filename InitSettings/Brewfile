@@ -4,6 +4,7 @@ tap "homebrew/core"
 brew "1password-cli"
 brew "arp-scan"
 brew "cloc"
+brew "discord"
 brew "cmake"
 brew "cmd-eikana"
 brew "colordiff"
@@ -51,7 +52,6 @@ cask "provisionql", args: { appdir: "/Applications" }
 cask "sdformatter"
 cask "sf-symbols", args: { appdir: "/Applications" }
 cask "shiftit", args: { appdir: "/Applications" }
-cask "sketch"
 cask "sourcetree", args: { appdir: "/Applications" }
 cask "svnx", args: { appdir: "/Applications" }
 cask "the-unarchiver", args: { appdir: "/Applications" }
