@@ -79,8 +79,8 @@ function setDeviceSupport() {
     echo "arg2(xcode version number) is required! e.g. 12.5"; return
   fi
   which svn
-  echo "Clone $1 DeviceSupport zip from https://github.com/filsv/iPhoneOSDeviceSupport"
-  svn export https://github.com/filsv/iPhoneOSDeviceSupport/trunk/$1.zip
+  echo "Clone $1 DeviceSupport zip from https://github.com/filsv/iOSDeviceSupport"
+  svn export https://github.com/filsv/iOSDeviceSupport/trunk/$1.zip
   unzip $1.zip
   mv -f ./$1 /Applications/Xcode$2.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/
   rm -f $1.zip

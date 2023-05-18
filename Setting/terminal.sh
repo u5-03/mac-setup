@@ -73,4 +73,4 @@ autoload -Uz vcs_info
 #     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 # }
 
- export SHELL="/usr/local/bin/zsh"
+ export SHELL="/otp/homebrew/bin/zsh"

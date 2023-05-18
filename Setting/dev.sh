@@ -31,3 +31,6 @@ eval "$(rbenv init -)"
 ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/emulator:$ANDROID_HOME/tools/:$ANDROID_HOME/platform-tools
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/Contents/Home"
+
+# GitHubCLI
+eval "$(gh completion -s zsh)"
