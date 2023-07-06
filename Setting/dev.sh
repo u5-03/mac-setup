@@ -10,7 +10,8 @@ export PATH="$PYENV_ROOT/shims:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv init --path)"
 # Flutter
-flutterPath="$HOME/dev-tool/flutter/bin"
+## Ref: https://zenn.dev/aiiro/articles/6df504554d57ef
+flutterPath="$HOME/fvm/default/bin"
 if [[ ! $PATH =~ $flutterPath ]]; then
   export PATH="$PATH:$flutterPath"
 fi

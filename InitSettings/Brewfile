@@ -1,15 +1,16 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "leoafarias/fvm"
 brew "1password-cli"
 brew "arp-scan"
 brew "cloc"
 brew "discord"
 brew "cmake"
-brew "cmd-eikana"
 brew "colordiff"
 brew "curl"
 brew "lame"
+brew "fvm"
 brew "gh"
 brew "goenv"
 brew "gnu-sed"
@@ -41,7 +42,6 @@ cask "cheatsheet", args: { appdir: "/Applications" }
 cask "dash", args: { appdir: "/Applications" }
 cask "docker", args: { appdir: "/Applications" }
 cask "finicky"
-cask "firefox", args: { appdir: "/Applications" }
 cask "google-japanese-ime", args: { appdir: "/Applications" }
 cask "handbrake", args: { appdir: "/Applications" }
 cask "imageoptim", args: { appdir: "/Applications" }
@@ -66,5 +66,4 @@ cask "zeplin", args: { appdir: "/Applications" }
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Slack", id: 803453959
