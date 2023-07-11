@@ -21,7 +21,7 @@ function setBiometricsAuthAsTouchID() {
         sudo chmod u+w /etc/pam.d/
         sudo vi /etc/pam.d/sudo
         return 0
-        ;;  
+        ;;
       *)
         echo "Enter yes"
         ;;

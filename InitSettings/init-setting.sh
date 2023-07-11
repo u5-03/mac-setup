@@ -22,7 +22,7 @@ source ~/.zshrc
 echo "--Setting of zsh------------------------------------------"
 which -a zsh
 sudo -- sh -c 'echo '/usr/local/bin/zsh' >> /etc/shells'
-chsh -s /usr/local/bin/zsh
+chsh -s /bin/zsh
 
 # Screen captureの保存先を変更
 ccd

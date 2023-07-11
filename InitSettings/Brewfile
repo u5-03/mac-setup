@@ -15,7 +15,6 @@ brew "gh"
 brew "goenv"
 brew "gnu-sed"
 brew "jq"
-brew "java"
 brew "kela"
 brew "mas"
 brew "mint"
@@ -28,7 +27,6 @@ brew "tmux"
 brew "translate-shell"
 brew "wget"
 brew "zplug"
-brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
@@ -37,11 +35,11 @@ cask "alfred", args: { appdir: "/Applications" }
 cask "android-studio", args: { appdir: "/Applications" }
 cask "appcleaner", args: { appdir: "/Applications" }
 cask "balenaetcher"
-cask "bettertouchtool"
+cask "bettertouchtool", args: { appdir: "/Applications" }
 cask "cheatsheet", args: { appdir: "/Applications" }
 cask "dash", args: { appdir: "/Applications" }
 cask "docker", args: { appdir: "/Applications" }
-cask "finicky"
+cask "finicky", args: { appdir: "/Applications" }
 cask "google-japanese-ime", args: { appdir: "/Applications" }
 cask "handbrake", args: { appdir: "/Applications" }
 cask "imageoptim", args: { appdir: "/Applications" }
@@ -51,18 +49,17 @@ cask "menumeters", args: { appdir: "/Applications" }
 cask "notion", args: { appdir: "/Applications" }
 cask "postman", args: { appdir: "/Applications" }
 cask "provisionql", args: { appdir: "/Applications" }
-cask "sdformatter"
+cask "sdformatter", args: { appdir: "/Applications" }
 cask "sf-symbols", args: { appdir: "/Applications" }
 cask "shiftit", args: { appdir: "/Applications" }
 cask "sourcetree", args: { appdir: "/Applications" }
 cask "svnx", args: { appdir: "/Applications" }
 cask "the-unarchiver", args: { appdir: "/Applications" }
 cask "visual-studio-code", args: { appdir: "/Applications" }
-cask "vivaldi"
+cask "vivaldi", args: { appdir: "/Applications" }
 cask "vlc", args: { appdir: "/Applications" }
-cask "wkhtmltopdf"
+cask "wkhtmltopdf", args: { appdir: "/Applications" }
 cask "xcodes", args: { appdir: "/Applications" }
-cask "zeplin", args: { appdir: "/Applications" }
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
