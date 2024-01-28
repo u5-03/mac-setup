@@ -82,7 +82,7 @@ function setDeviceSupport() {
   echo "Clone $1 DeviceSupport zip from https://github.com/filsv/iOSDeviceSupport"
   svn export https://github.com/filsv/iOSDeviceSupport/trunk/$1.zip
   unzip $1.zip
-  mv -f ./$1 /Applications/Xcode$2.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/
+  mv -f ./$1 /Applications/Xcode-$2.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/
   rm -f $1.zip
   rm -f -r __MACOSX
   echo "Set $1 Device Support file to Xcode$2!"
