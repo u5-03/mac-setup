@@ -49,7 +49,7 @@ function replaceKeybindingFile() {
     echo arg1 must be xcode version number!; return
   fi
   #arg1のバージョンのXcodeがアプリケーションフォルダにあるかどうかの判定
-  XcodePath=/Applications/Xcode$1.app
+  XcodePath=/Applications/Xcode-$1.app
   if [ ! -e $XcodePath ]; then
     echo Xcode$1.app does not exist in Applications directory!; return
   fi
@@ -63,7 +63,7 @@ function replaceKeybindingFile() {
   else
     echo "arg2(`$KeyBindingFilePath`) is invalid!"; return
   fi
-  XcodeKeyBindingFilePath="/Applications/Xcode$1.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist"
+  XcodeKeyBindingFilePath="/Applications/Xcode-$1.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist"
   cp -f $KeyBindingFilePath $XcodeKeyBindingFilePath
   echo "keybinding file of Xcode$1.app was replaced!"
 }
