@@ -10,10 +10,13 @@ export PATH="$PYENV_ROOT/shims:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv init --path)"
 # Flutter
-flutterPath="$HOME/dev-tool/flutter/bin"
+## Ref: https://zenn.dev/aiiro/articles/6df504554d57ef
+flutterPath="$HOME/fvm/default/bin"
 if [[ ! $PATH =~ $flutterPath ]]; then
   export PATH="$PATH:$flutterPath"
 fi
+## `Unable to find bundled Java version` => Run command below.
+## Ref: https://qiita.com/y-matsumoto/items/74467e528c7b2c745b87
 androidSDKPAth="$HOME/Library/Android/sdk/platform-tools"
 if [[ ! $PATH =~ $androidSDKPAth ]]; then
   export PATH="$androidSDKPAth:$PATH"
@@ -30,7 +33,12 @@ eval "$(rbenv init -)"
 # Android
 ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/emulator:$ANDROID_HOME/tools/:$ANDROID_HOME/platform-tools
-export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/Contents/Home"
+
+# Ref: https://qiita.com/uhooi/items/74bdc893c7a7b43f6e94#android-studio%E3%81%AB%E5%90%8C%E6%A2%B1%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8Bjdk%E3%81%8C%E8%A6%8B%E3%81%A4%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84
+export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
+if [ -d "${JAVA_HOME}" ]; then
+  export PATH="${JAVA_HOME}/bin:$PATH"
+fi
 
 # GitHubCLI
 eval "$(gh completion -s zsh)"
