@@ -51,7 +51,7 @@ function replaceKeybindingFile() {
   #arg1のバージョンのXcodeがアプリケーションフォルダにあるかどうかの判定
   XcodePath=/Applications/Xcode-$1.app
   if [ ! -e $XcodePath ]; then
-    echo Xcode$1.app does not exist in Applications directory!; return
+    echo Xcode-$1.app does not exist in Applications directory!; return
   fi
   KeyBindingFilePath=""
   PrivateKeyBindingFilePath=$HOME/SettingFiles/Xcode/XcodekeyBinding/IDETextKeyBindingSet.plist
@@ -65,7 +65,7 @@ function replaceKeybindingFile() {
   fi
   XcodeKeyBindingFilePath="/Applications/Xcode-$1.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist"
   cp -f $KeyBindingFilePath $XcodeKeyBindingFilePath
-  echo "keybinding file of Xcode$1.app was replaced!"
+  echo "keybinding file of Xcode-$1.app was replaced!"
 }
 
 ## Specify the iOS and Xcode version, download the DeviceSupport file and set it in the corresponding version Xcode ($1: iOS version, $2: Xcode version path)
