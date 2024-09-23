@@ -64,7 +64,7 @@ function replaceKeybindingFile() {
     echo "arg2(`$KeyBindingFilePath`) is invalid!"; return
   fi
   XcodeKeyBindingFilePath="/Applications/Xcode$1.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist"
-  cp -f $KeyBindingFilePath $XcodeKeyBindingFilePath
+  sudo cp -f $KeyBindingFilePath $XcodeKeyBindingFilePath
   echo "keybinding file of Xcode$1.app was replaced!"
 }
 

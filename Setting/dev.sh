@@ -14,6 +14,7 @@ eval "$(pyenv init --path)"
 flutterPath="$HOME/fvm/default/bin"
 if [[ ! $PATH =~ $flutterPath ]]; then
   export PATH="$PATH:$flutterPath"
+  export PATH="$PATH":"$HOME/.pub-cache/bin"
 fi
 ## `Unable to find bundled Java version` => Run command below.
 ## Ref: https://qiita.com/y-matsumoto/items/74467e528c7b2c745b87
@@ -33,6 +34,7 @@ eval "$(rbenv init -)"
 # Android
 ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/emulator:$ANDROID_HOME/tools/:$ANDROID_HOME/platform-tools
+export PATH=$PATH:~/Library/Android/sdk/build-tools/34.0.0
 
 # Ref: https://qiita.com/uhooi/items/74bdc893c7a7b43f6e94#android-studio%E3%81%AB%E5%90%8C%E6%A2%B1%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8Bjdk%E3%81%8C%E8%A6%8B%E3%81%A4%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84
 export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home

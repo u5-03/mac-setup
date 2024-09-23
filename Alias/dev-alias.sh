@@ -14,3 +14,4 @@ alias swiftymocky='mint run SwiftyMocky swiftyMocky'
 alias sm='swiftymocky'
 alias sml='xcrun simctl list'
 alias spg='swift package generate-xcodeproj'
+alias asd="open -a /Applications/Android\ Studio.app"

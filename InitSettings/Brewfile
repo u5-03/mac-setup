@@ -5,7 +5,6 @@ tap "leoafarias/fvm"
 brew "1password-cli"
 brew "arp-scan"
 brew "cloc"
-brew "discord"
 brew "cmake"
 brew "colordiff"
 brew "curl"
@@ -38,10 +37,10 @@ cask "balenaetcher"
 cask "bettertouchtool", args: { appdir: "/Applications" }
 cask "cheatsheet", args: { appdir: "/Applications" }
 cask "dash", args: { appdir: "/Applications" }
+cask "discord", args: { appdir: "/Applications" }
 cask "docker", args: { appdir: "/Applications" }
 cask "finicky", args: { appdir: "/Applications" }
 cask "google-japanese-ime", args: { appdir: "/Applications" }
-cask "handbrake", args: { appdir: "/Applications" }
 cask "imageoptim", args: { appdir: "/Applications" }
 cask "iterm2", args: { appdir: "/Applications" }
 cask "keyboardcleantool", args: { appdir: "/Applications" }
@@ -53,7 +52,6 @@ cask "sdformatter", args: { appdir: "/Applications" }
 cask "sf-symbols", args: { appdir: "/Applications" }
 cask "shiftit", args: { appdir: "/Applications" }
 cask "sourcetree", args: { appdir: "/Applications" }
-cask "svnx", args: { appdir: "/Applications" }
 cask "the-unarchiver", args: { appdir: "/Applications" }
 cask "visual-studio-code", args: { appdir: "/Applications" }
 cask "vivaldi", args: { appdir: "/Applications" }
