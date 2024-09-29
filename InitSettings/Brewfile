@@ -1,8 +1,5 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "leoafarias/fvm"
-brew "1password-cli"
 brew "arp-scan"
 brew "cloc"
 brew "cmake"
@@ -14,11 +11,11 @@ brew "gh"
 brew "goenv"
 brew "gnu-sed"
 brew "jq"
-brew "kela"
 brew "mas"
 brew "mint"
 brew "nodebrew"
 brew "pyenv"
+brew "python"
 brew "rbenv"
 brew "tcptraceroute"
 brew "tfenv"
@@ -30,17 +27,23 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 cask "1password", args: { appdir: "/Applications" }
+cask "1password-cli", args: { appdir: "/Applications" }
 cask "alfred", args: { appdir: "/Applications" }
 cask "android-studio", args: { appdir: "/Applications" }
 cask "appcleaner", args: { appdir: "/Applications" }
 cask "balenaetcher"
+cask "discord", args: { appdir: "/Applications" }
 cask "bettertouchtool", args: { appdir: "/Applications" }
 cask "cheatsheet", args: { appdir: "/Applications" }
 cask "dash", args: { appdir: "/Applications" }
 cask "discord", args: { appdir: "/Applications" }
 cask "docker", args: { appdir: "/Applications" }
 cask "finicky", args: { appdir: "/Applications" }
+<<<<<<< Updated upstream
 cask "google-japanese-ime", args: { appdir: "/Applications" }
+=======
+cask "handbrake", args: { appdir: "/Applications" }
+>>>>>>> Stashed changes
 cask "imageoptim", args: { appdir: "/Applications" }
 cask "iterm2", args: { appdir: "/Applications" }
 cask "keyboardcleantool", args: { appdir: "/Applications" }
