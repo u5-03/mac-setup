@@ -1,51 +1,21 @@
-# 環境変数export LANG=ja_JP.UTF-8
-# export KCODE=u           # KCODEにUTF-8を設定
+# Ref: https://qiita.com/hikagami/items/560bd0b2a413ef08ad46
+zinit light romkatv/powerlevel10k
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# ## 色を使用出来るようにする
-# autoload -Uz colors
-# colors
+autoload -Uz compinit
+compinit
 
-# ## 補完機能を有効にする
-# autoload -Uz compinit
-# compinit
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light mollifier/cd-bookmark
 
-# ## cdを使わずにディレクトリを移動できる
-# setopt auto_cd
-# ## $ cd - でTabを押すと、ディレクトリの履歴が見れる
-# setopt auto_pushd
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 
-# ## タブ補完時に大文字小文字を区別しない
-# zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-# # Options
-# # 日本語ファイル名を表示可能にする
-# setopt print_eight_bit
-# # コマンドラインでも # 以降をコメントと見なす
-# setopt interactive_comments
-# # beep を無効にする
-# setopt no_beep
-# # rm *で確認を求める機能を無効化する
-# setopt RM_STAR_SILENT
-
-# # # Terminalのユーザー名を非表示にする
-# # PROMPT=$'%n [%*] -> %% '
-# # # 現在のパスを表示(文字を青色に設定)
-# # RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
-
-# # https://qiita.com/tocomi/items/c0127c44eded54b43c11
-# function powerline_precmd() {
-#     PS1="$(powerline-shell --shell zsh $?)
-#     $"
-# }
-
-# function install_powerline_precmd() {
-#   for s in "${precmd_functions[@]}"; do
-#     if [ "$s" = "powerline_precmd" ]; then
-#       return
-#     fi
-#   done
-#   precmd_functions+=(powerline_precmd)
-# }
 
 # Command history file
 HISTFILE=~/.zsh_history
@@ -86,21 +56,3 @@ export LS_COLORS="di=36"
 setopt AUTO_CD
 
 export SHELL="/otp/homebrew/bin/zsh"
-
-# Ref: https://qiita.com/hikagami/items/560bd0b2a413ef08ad46
-zinit light romkatv/powerlevel10k
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-autoload -Uz compinit
-compinit
-
-zinit light zdharma-continuum/fast-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-completions
-zinit light mollifier/cd-bookmark
-
-alias ls='lsd'
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
