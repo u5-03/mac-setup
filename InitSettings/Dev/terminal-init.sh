@@ -1,15 +1,16 @@
-# Powerline-shell
-# https://qiita.com/tocomi/items/c0127c44eded54b43c11
+# Ref: https://qiita.com/hikagami/items/560bd0b2a413ef08ad46
+# Set up Zinit
+sh -c "$(curl -fsSL https://git.io/zinit-install)"
+source ~/.zshrc
+zinit self-update
+## Install font for powerlevel10k
+curl -L -o ~/Downloads/MesloLGS_NF_Regular.ttf "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf"
+curl -L -o ~/Downloads/MesloLGS_NF_Bold.ttf "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf"
+curl -L -o ~/Downloads/MesloLGS_NF_Italic.ttf "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf"
+curl -L -o ~/Downloads/MesloLGS_NF_Bold_Italic.ttf "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf"
+mv ~/Downloads/MesloLGS_NF_Regular.ttf ~/Library/Fonts/
+mv ~/Downloads/MesloLGS_NF_Bold.ttf ~/Library/Fonts/
+mv ~/Downloads/MesloLGS_NF_Italic.ttf ~/Library/Fonts/
+mv ~/Downloads/MesloLGS_NF_Bold_Italic.ttf ~/Library/Fonts/
 
-## Install Powerline-shell
-git clone https://github.com/b-ryan/powerline-shell $HOME/dev-tool/powerline-shell
-cd $HOME/dev-tool/powerline-shell
-sudo python setup.py install
-## Install fonts
-git clone https://github.com/powerline/fonts.gszit --depth=1 $HOME/dev-tool/fonts
-$HOME/dev-tool/fonts/install.sh
-cd $HOME/dev-tool
-cd $HOME
-mkdir $HOME/.config/powerline
-cp $HOME/SettingFiles/Powerline-shell/config.json $HOME/.config/powerline/config.json
-cp $HOME/SettingFiles/Powerline-shell/mytheme.pyc $HOME/dev-tool/powerline-shell/powerline_shell/themes/mytheme.pyc
+brew install lsd
