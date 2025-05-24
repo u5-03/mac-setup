@@ -10,8 +10,7 @@ alias mb='mint bootstrap'
 alias py='python'
 alias flutter="fvm flutter"
 alias dart="fvm dart"
-# unalias flutter
-# unalias dart
+
 alias fl='flutter'
 alias fs='bundle exec fastlane'
 alias swiftymocky='mint run SwiftyMocky swiftyMocky'

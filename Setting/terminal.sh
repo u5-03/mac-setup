@@ -1,3 +1,24 @@
+
+
+
+
+# Prevent Powerlevel10k warning messages
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Zinit initialization
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+  command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+  command git clone -q https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git"
+fi
+
+# Load zinit silently
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh" >/dev/null 2>&1
+
 # 環境変数export LANG=ja_JP.UTF-8
 # export KCODE=u           # KCODEにUTF-8を設定
 
@@ -85,20 +106,17 @@ export LS_COLORS="di=36"
 # Automatically change directories if the entered string is recognized as a path
 setopt AUTO_CD
 
-export SHELL="/otp/homebrew/bin/zsh"
+export SHELL="/opt/homebrew/bin/zsh"
 
-# Ref: https://qiita.com/hikagami/items/560bd0b2a413ef08ad46
-zinit light romkatv/powerlevel10k
+# Zinit plugins configuration - Ref: https://qiita.com/hikagami/items/560bd0b2a413ef08ad46
+# Load completion system silently
+autoload -Uz compinit
+compinit -q
+
+# テーマ設定
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-autoload -Uz compinit
-compinit
-
-zinit light zdharma-continuum/fast-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-completions
-zinit light mollifier/cd-bookmark
-
+# LS aliases using lsd
 alias ls='lsd'
 alias l='ls -l'
 alias la='ls -a'

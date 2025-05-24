@@ -37,7 +37,7 @@ export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/emulator:$ANDROID_HOME/tools/:$AND
 export PATH=$PATH:~/Library/Android/sdk/build-tools/34.0.0
 
 # Ref: https://qiita.com/uhooi/items/74bdc893c7a7b43f6e94#android-studio%E3%81%AB%E5%90%8C%E6%A2%B1%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8Bjdk%E3%81%8C%E8%A6%8B%E3%81%A4%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84
-export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
+export JAVA_HOME=~/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
 if [ -d "${JAVA_HOME}" ]; then
   export PATH="${JAVA_HOME}/bin:$PATH"
 fi
