@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(brew search:*)",
+      "Bash(brew info:*)",
+      "Bash(brew bundle check:*)",
+      "Bash(brew bundle install:*)",
+      "Bash(sh:*)"
+    ],
+    "deny": []
+  }
+}

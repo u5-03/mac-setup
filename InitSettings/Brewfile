@@ -1,11 +1,9 @@
-tap "homebrew/bundle"
 tap "leoafarias/fvm"
 brew "arp-scan"
 brew "cloc"
 brew "cmake"
 brew "colordiff"
 brew "curl"
-brew "lame"
 brew "fvm"
 brew "gh"
 brew "goenv"
@@ -17,10 +15,8 @@ brew "nodebrew"
 brew "pyenv"
 brew "python"
 brew "rbenv"
-brew "tcptraceroute"
 brew "tfenv"
 brew "tmux"
-brew "translate-shell"
 brew "wget"
 brew "zplug"
 brew "zsh-autosuggestions"
@@ -39,11 +35,8 @@ cask "dash", args: { appdir: "/Applications" }
 cask "discord", args: { appdir: "/Applications" }
 cask "docker", args: { appdir: "/Applications" }
 cask "finicky", args: { appdir: "/Applications" }
-<<<<<<< Updated upstream
 cask "google-japanese-ime", args: { appdir: "/Applications" }
-=======
 cask "handbrake", args: { appdir: "/Applications" }
->>>>>>> Stashed changes
 cask "imageoptim", args: { appdir: "/Applications" }
 cask "iterm2", args: { appdir: "/Applications" }
 cask "keyboardcleantool", args: { appdir: "/Applications" }
@@ -59,7 +52,6 @@ cask "the-unarchiver", args: { appdir: "/Applications" }
 cask "visual-studio-code", args: { appdir: "/Applications" }
 cask "vivaldi", args: { appdir: "/Applications" }
 cask "vlc", args: { appdir: "/Applications" }
-cask "wkhtmltopdf", args: { appdir: "/Applications" }
 cask "xcodes", args: { appdir: "/Applications" }
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694

@@ -20,7 +20,7 @@ function xcodeOpen() {
     echo arg1 must be xcode version number!; return
   fi
   #arg1のバージョンのXcodeがアプリケーションフォルダにあるかどうかの判定
-  XcodePath=/Applications/Xcode$1.app
+  XcodePath=/Applications/Xcode-$1.app
   if [ ! -e $XcodePath ]; then
     echo Xcode$1.app does not exist in Applications directory!; return
   fi
@@ -49,7 +49,7 @@ function replaceKeybindingFile() {
     echo arg1 must be xcode version number!; return
   fi
   #arg1のバージョンのXcodeがアプリケーションフォルダにあるかどうかの判定
-  XcodePath=/Applications/Xcode$1.app
+  XcodePath=/Applications/Xcode-$1.app
   if [ ! -e $XcodePath ]; then
     echo Xcode$1.app does not exist in Applications directory!; return
   fi
@@ -63,7 +63,7 @@ function replaceKeybindingFile() {
   else
     echo "arg2(`$KeyBindingFilePath`) is invalid!"; return
   fi
-  XcodeKeyBindingFilePath="/Applications/Xcode$1.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist"
+  XcodeKeyBindingFilePath="/Applications/Xcode-$1.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist"
   sudo cp -f $KeyBindingFilePath $XcodeKeyBindingFilePath
   echo "keybinding file of Xcode$1.app was replaced!"
 }
@@ -82,7 +82,7 @@ function setDeviceSupport() {
   echo "Clone $1 DeviceSupport zip from https://github.com/filsv/iOSDeviceSupport"
   svn export https://github.com/filsv/iOSDeviceSupport/trunk/$1.zip
   unzip $1.zip
-  mv -f ./$1 /Applications/Xcode$2.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/
+  mv -f ./$1 /Applications/Xcode-$2.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/
   rm -f $1.zip
   rm -f -r __MACOSX
   echo "Set $1 Device Support file to Xcode$2!"

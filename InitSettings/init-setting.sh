@@ -1,15 +1,21 @@
-# finickyの設定ファイルをコピーする
+# finickyの設定ファイルをコピーする（存在する場合のみ）
 # ref: https://github.com/johnste/finicky#installation
-cp -f ./InitSettings/.finicky.js $HOME
+if [ -f ./InitSettings/.finicky.js ]; then
+  cp -f ./InitSettings/.finicky.js $HOME
+fi
 ## Brewfileに書かれたパッケージのインストール
 brew bundle --file=./InitSettings/Brewfile
 
-if [ -e ~/.zshrc ]; then
+if [ ! -e ~/.zshrc ]; then
   touch ~/.zshrc
 fi
-# 個人用の設定リポジトリの取得
+# 個人用の設定リポジトリの取得（存在しない場合のみ）
 echo "--Setting of private config repository---------------------"
-git clone https://github.com/u5-03/SettingFiles.git $HOME/SettingFiles
+if [ ! -d "$HOME/SettingFiles" ]; then
+  git clone https://github.com/u5-03/SettingFiles.git $HOME/SettingFiles
+else
+  echo "SettingFiles already exists. Skipping clone."
+fi
 # PrivateConfigの読み込み
 if [ -e $HOME/SettingFiles/PrivateInitSettings/private-repositories.sh ]; then
   source $HOME/SettingFiles/PrivateInitSettings/private-repositories.sh
